@@ -1,0 +1,30 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianbetts/teamProfileGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianbetts/teamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/julianbetts/teamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.4"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
