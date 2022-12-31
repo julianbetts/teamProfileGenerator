@@ -4,7 +4,7 @@ const Intern = require("./lib/Intern.js")
 const Manager = require("./lib/Manager.js")
 const inquirer = require("inquirer")
 const fs = require("fs") //built in no need to install
-
+const path = require('path')
 const employeeArray = []
 
 const questions = [
@@ -112,7 +112,7 @@ function chooseEmployee() {
         }else {
           console.log("quit")
           console.log(employeeArray)
-          writeToFile()
+          writeToFile('index.html', generateHtml())
         }
       });
 }
@@ -136,7 +136,26 @@ function createIntern() {
     });
 }
 
-
+function generateHtml(){
+  return `
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p> 
+    ${employeeArray[0].getName()}
+    </p>
+    </div>
+</body>
+</html>
+  `
+}
 
 createManager();
 
